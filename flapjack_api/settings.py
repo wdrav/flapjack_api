@@ -1,4 +1,8 @@
 import os
+from dotenv import load_dotenv
+
+# Local path for .env comes from the local dev.env file in the same directory
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), 'dev.env'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -99,10 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 LANGUAGE_CODE = 'en-us'
-
-USE_TZ = True
-
-TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
